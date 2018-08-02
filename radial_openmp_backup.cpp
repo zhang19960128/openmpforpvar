@@ -155,7 +155,7 @@ int main(int argc,char* argv[]){
 				printtraject(cell,tick,0,argv[1],variance);		
 		}
 		std::fstream fs;
-		fs.open("final.txt",std::fstream::in);
+		fs.open("final.txt",std::fstream::out);
 		for(size_t i=0;i<cell*cell*cell;i++){
 			fs<<variance[i][0]<<" "<<variance[i][1]<<" "<<variance[i][2]<<std::endl;
 		}
