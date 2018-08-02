@@ -141,7 +141,7 @@ int main(int argc,char* argv[]){
     double variance[cell*cell*cell][3];
 		#pragma omp parallel
 		{
-	  	std::string input_file="dump.xyz";
+	  	std::string input_file=argv[1];
 			int ID=omp_get_thread_num();
 			int tick;
 			for(size_t atom_i=0;atom_i<job_per_processor;atom_i++){
